@@ -19,13 +19,15 @@ public class GameManager : MonoBehaviour
         
     }
 
-     IEnumerator SpawnTarget()
-     {
-         while(true)
-         {
-            yield return new WaitForSeconds(spawnRate);
-            int index = Random.Range(0, targets.Count);
-            Instantiate(targets[index]);
-         }
-     }
+    IEnumerator SpawnTarget()
+    {
+        while(true)
+        {
+        yield return new WaitForSeconds(spawnRate);
+        int index = Random.Range(0, targets.Count);
+        Instantiate(targets[index]);
+        }
+    }
+
+    
 }
