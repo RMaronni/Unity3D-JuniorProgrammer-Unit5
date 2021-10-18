@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     {
         UpdateScore(0);
         StartCoroutine(SpawnTarget());
-        gameOverText.gameObject.SetActive(true);
+        
     }
 
     // Update is called once per frame
@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
     {
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
+    }
+
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
     }
 
     
